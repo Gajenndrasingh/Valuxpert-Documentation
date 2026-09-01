@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react';
-import { Copy, Check } from 'lucide-react';
+import { Copy, Check, PlayCircle } from 'lucide-react';
+import staffImage from '../../public/staff.png'; // Yahan image import kiya hai
+
 
 const content = {
   en: {
@@ -82,6 +84,7 @@ const StaffManagement = ({ lang, search }) => {
       <div className="max-w-none" ref={contentRef}>
         <h2 className="text-3xl font-bold text-gray-900 mb-8">{text.h2}</h2>
         
+        {/* === SECTION 1: Adding a new branch === */}
         <h3 id={lang==='en'?'adding-a-new-branch':'nayi-branch-add-karna'} className="text-xl font-bold text-gray-900 mt-8 mb-4">{text.q1}</h3>
         <ol className="space-y-3 mb-6 list-none pl-0">
           <li className="text-lg text-gray-600 flex items-start"><span className="text-green-600 font-bold mr-2 mt-0.5">1.</span><p>{text.a1_1}</p></li>
@@ -98,6 +101,28 @@ const StaffManagement = ({ lang, search }) => {
         </ul>
         <p className="text-gray-600 text-lg mb-8">{text.a1_4}</p>
 
+        {/* Media Block 1: Branch */}
+        <div className="mt-8 mb-16 flex flex-col items-start gap-6">
+          <div className="w-full">
+            <img 
+              src={staffImage} 
+              alt="Adding a new branch" 
+              className="w-full rounded-lg border border-gray-200 shadow-md object-contain bg-white"
+            />
+          </div>
+          <a 
+            href="https://www.youtube.com/watch?v=QdtBJXaPjtk&list=PLMB5R0mHXahg" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-red-50 text-red-600 font-medium rounded-md border border-red-100 hover:bg-red-100 hover:text-red-700 transition-colors w-fit shadow-sm"
+          >
+            <PlayCircle className="w-5 h-5" />
+            {lang === 'en' ? 'Watch Video Tutorial' : 'Video Tutorial Dekhein'}
+          </a>
+        </div>
+
+
+        {/* === SECTION 2: Creating Roles for Staff === */}
         <h3 id={lang==='en'?'creating-roles-for-staff':'staff-ke-liye-roles-banana'} className="text-xl font-bold text-gray-900 mt-12 mb-4">{text.q2}</h3>
         <p className="text-gray-600 text-lg mb-6 leading-relaxed">{text.a2_1}</p>
         <ol className="space-y-3 mb-6 list-none pl-0">
@@ -118,6 +143,28 @@ const StaffManagement = ({ lang, search }) => {
           <strong className="font-semibold">{text.a2_6}</strong>
         </div>
 
+        {/* Media Block 2: Roles */}
+        <div className="mt-8 mb-16 flex flex-col items-start gap-6">
+          <div className="w-full">
+            <img 
+              src="/roles-image.png" 
+              alt="Creating roles for staff" 
+              className="w-full rounded-lg border border-gray-200 shadow-md object-contain bg-white"
+            />
+          </div>
+          <a 
+            href="YAHAN_YOUTUBE_KI_LINK_PASTE_KAREIN" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-red-50 text-red-600 font-medium rounded-md border border-red-100 hover:bg-red-100 hover:text-red-700 transition-colors w-fit shadow-sm"
+          >
+            <PlayCircle className="w-5 h-5" />
+            {lang === 'en' ? 'Watch Video Tutorial' : 'Video Tutorial Dekhein'}
+          </a>
+        </div>
+
+
+        {/* === SECTION 3: Add a New Staff Member === */}
         <h3 id={lang==='en'?'add-a-new-staff-member':'naya-staff-member-add-karein'} className="text-xl font-bold text-gray-900 mt-12 mb-4">{text.q3}</h3>
         <p className="text-gray-600 text-lg mb-6">{text.a3_1}</p>
         <ol className="space-y-3 mb-6 list-none pl-0">
@@ -128,6 +175,27 @@ const StaffManagement = ({ lang, search }) => {
           <li className="text-lg text-gray-600 flex items-start"><span className="text-green-600 font-bold mr-2 mt-0.5">5.</span><p>{text.a3_6}</p></li>
         </ol>
         <p className="text-gray-600 text-lg mb-8">{text.a3_7}</p>
+
+        {/* Media Block 3: New Staff Member */}
+        <div className="mt-8 mb-12 flex flex-col items-start gap-6">
+          <div className="w-full">
+            <img 
+              src="/staff-member-image.png" 
+              alt="Add new staff member" 
+              className="w-full rounded-lg border border-gray-200 shadow-md object-contain bg-white"
+            />
+          </div>
+          <a 
+            href="YAHAN_YOUTUBE_KI_LINK_PASTE_KAREIN" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-red-50 text-red-600 font-medium rounded-md border border-red-100 hover:bg-red-100 hover:text-red-700 transition-colors w-fit shadow-sm"
+          >
+            <PlayCircle className="w-5 h-5" />
+            {lang === 'en' ? 'Watch Video Tutorial' : 'Video Tutorial Dekhein'}
+          </a>
+        </div>
+
       </div>
       <hr className="border-gray-200 mt-10" />
     </section>

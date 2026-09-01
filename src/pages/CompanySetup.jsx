@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react';
-import { Copy, Check } from 'lucide-react';
+import { Copy, Check, PlayCircle } from 'lucide-react'; // PlayCircle import kiya
+import CompanysetupImage from '../../public/Companysetup.png'; // Yahan image import kiya hai
+
 
 const content = {
   en: {
@@ -68,6 +70,27 @@ const CompanySetup = ({ lang, search }) => {
           </li>
         </ul>
         <p className="text-gray-600 text-lg mb-8">{text.a1_6}</p>
+
+        {/* Media Block: Image & Video Button */}
+        <div className="mt-12 flex flex-col items-start gap-6">
+          <div className="w-full">
+            <img 
+              src={CompanysetupImage} 
+              alt="Company Setup" 
+              className="w-full rounded-lg border border-gray-200 shadow-md object-contain bg-white"
+            />
+          </div>
+          <a 
+            href="https://www.youtube.com/watch?v=QdtBJXaPjtk&list=PLMB5R0mHXahg" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-red-50 text-red-600 font-medium rounded-md border border-red-100 hover:bg-red-100 hover:text-red-700 transition-colors w-fit shadow-sm"
+          >
+            <PlayCircle className="w-5 h-5" />
+            {lang === 'en' ? 'Watch Video Tutorial' : 'Video Tutorial Dekhein'}
+          </a>
+        </div>
+
       </div>
       <hr className="border-gray-200 mt-10" />
     </section>
