@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
-import { Copy, Check, PlayCircle } from 'lucide-react'; // PlayCircle import kiya
-import adminsettingImage from '../../public/Adminsettings.png'; // Yahan image import kiya hai
-
+import { Copy, Check, PlayCircle } from 'lucide-react'; 
+import adminsettingImage from '../../public/Adminsettings.png'; 
 
 const content = {
   en: {
@@ -105,27 +104,6 @@ const AdminSettings = ({ lang, search }) => {
           </li>
         </ul>
 
-        {/* Media Block 1 */}
-        <div className="mt-8 mb-16 flex flex-col items-start gap-6">
-          <div className="w-full">
-            <img 
-              src={adminsettingImage} 
-              alt="Admin Settings" 
-              className="w-full rounded-lg border border-gray-200 shadow-md object-contain bg-white"
-            />
-          </div>
-          <a 
-            href="https://www.youtube.com/watch?v=QdtBJXaPjtk&list=PLMB5R0mHXahg" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-red-50 text-red-600 font-medium rounded-md border border-red-100 hover:bg-red-100 hover:text-red-700 transition-colors w-fit shadow-sm"
-          >
-            <PlayCircle className="w-5 h-5" />
-            {lang === 'en' ? 'Watch Video Tutorial' : 'Video Tutorial Dekhein'}
-          </a>
-        </div>
-
-
         {/* === SECTION 2: Admin Module === */}
         <h3 id={lang==='en'?'admin-module':'admin-module'} className="text-xl font-bold text-gray-900 mt-12 mb-4">{text.q2}</h3>
         <p className="text-gray-600 text-lg mb-8 leading-relaxed">{text.a2_1}</p>
@@ -150,17 +128,17 @@ const AdminSettings = ({ lang, search }) => {
           </table>
         </div>
 
-        {/* Media Block 2 */}
-        <div className="mt-8 mb-12 flex flex-col items-start gap-6">
+        {/* MEDIA BLOCK: Image & Video Button (Sabse aakhir mein) */}
+        <div className="mt-12 flex flex-col items-start gap-6">
           <div className="w-full">
             <img 
-              src="/admin-module-image.png" 
-              alt="Admin Module Properties" 
+              src={adminsettingImage} 
+              alt="Admin Settings Overview" 
               className="w-full rounded-lg border border-gray-200 shadow-md object-contain bg-white"
             />
           </div>
           <a 
-            href="YAHAN_YOUTUBE_KI_LINK_PASTE_KAREIN" 
+            href="https://www.youtube.com/watch?v=QdtBJXaPjtk&list=PLMB5R0mHXahg" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-red-50 text-red-600 font-medium rounded-md border border-red-100 hover:bg-red-100 hover:text-red-700 transition-colors w-fit shadow-sm"
